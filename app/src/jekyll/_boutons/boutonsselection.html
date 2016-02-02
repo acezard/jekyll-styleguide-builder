@@ -1,0 +1,124 @@
+---
+title: "Boutons de selection"
+---
+
+<div id="starterkit" class="field-style" style="overflow:hidden;">
+<h3> Selection résultats </h3>
+<ul class="searchSelection1">
+	<li>
+	    <input type="radio" id="sel1" name="sel" />
+	    <label for="sel1">en liste</label>
+	</li>
+	<li>
+	    <input type="radio" id="sel2" name="sel" />
+	    <label for="sel2">sur une carte</label>
+	</li>
+</ul>
+
+<ul class="searchSelection2">
+	<li>
+	    <input type="radio" id="blue1" name="blue" />
+	    <label for="blue1">en liste</label>
+	</li>
+	<li>
+	    <input type="radio" id="blue2" name="blue" />
+	    <label for="blue2">sur une carte</label>
+	</li>
+</ul>
+
+</div>
+
+<div class="field-style">
+
+<pre><code class="sass">.searchSelection {
+    list-style-type: none;
+    margin: 25px 0 0 0;
+    padding: 0;
+    li {
+        float: left;
+        margin: 0 5px 0 0;
+        width: auto;
+        height: auto;
+        position: relative;
+    }
+    label,
+    input {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    input[type="radio"] {
+        opacity: 0.011;
+        z-index: 100;
+        &:checked + label {
+	        background: $primary;
+	        color:$white;
+	        &:before {
+	        	color:$white;
+	        }      	
+        }
+    }
+    label {
+        cursor: pointer;
+        z-index: 90;
+		@include exo(400,normal);
+		@include fSize(13);
+		text-transform:lowercase;
+		color:$mainTxtColor;
+		position:relative;
+		display:inline-block;
+		padding:1rem 1rem 1rem 4rem;
+		&:before {
+			top:0.5rem;
+			position:absolute;
+			left:1rem;
+			font-family: $fontello;
+			color:$primary;
+			content:"\e800";
+			@include fSize(20);
+		}
+    }
+    li:last-child {
+    	label {
+    		&:before {
+    			content:"\e801";
+    		}
+    	}
+    }
+    label:hover {
+        background: lighten( $primary, 50% );
+    }
+}
+
+</code></pre>
+
+</div>
+
+<div id="starterkit" class="field-style" style="overflow:hidden;">
+<h3> Selection filtres </h3>
+<ul class="btnFilterBox" style="background:rgba(50,107,148,0.5);padding-left:1rem;">
+	<li>
+	    <input type="checkbox" id="sel3" name="selbox" />
+	    <label for="sel3">Fondation de l'avenir</label>
+	</li>
+	<li>
+	    <input type="checkbox" id="sel4" name="selbox" />
+	    <label for="sel4">Recherche et innovation en santé</label>
+	</li>
+</ul>
+
+
+<pre><code class="html"><ul class="btnFilterBox" style="background:rgba(50,107,148,0.5);padding-left:1rem;">
+	<li>
+	    <input type="checkbox" id="sel3" name="selbox">
+	    <label for="sel3">Fondation de l'avenir</label>
+	</li>
+	<li>
+	    <input type="checkbox" id="sel4" name="selbox">
+	    <label for="sel4">Recherche et innovation en santé</label>
+	</li>
+</ul></code></pre>
+</div>

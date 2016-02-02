@@ -1,0 +1,16 @@
+{% for collection in site.collections %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            {{ collection[0] | capitalize }}
+        </div>
+        <ul class="list-group">
+            {% for document in collection[1].docs %}
+                <li class="list-group-item">
+                    <a href="{{ site.baseurl }}/{{ document.relative_path | remove: "_" }}">
+                        {{ document.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endfor %}

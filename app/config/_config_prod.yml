@@ -1,0 +1,16 @@
+# Site settings
+title: Dialoguons
+email: contact@e-donate.fr
+description: Découvrez la solution de don e-donate
+url: "http://www.e-donate.fr" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+source: ../src/jekyll
+destination: ../../build
+keep_files: [css, fonts, images, js, .svn]
+collections:
+- fields
+
+environment: production

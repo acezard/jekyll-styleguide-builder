@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+    {% include navbar.html %}
+    <div id="hero-header" style="background-image: url('{{site.baseurl}}/{{ page.img }}');">
+    </div>
+    <div id="content-wrapper">
+        <div class="container">
+            <div class="row">
+                <article id="article-wrapper" class="col-sm-10 col-sm-offset-1 content-area">
+                    {{ content }}
+                </article>
+            </div>
+            <div id="post-nav" class="row">
+                <div class="col-sm-10 col-sm-offset-1 no-pad">
+                    {% if page.next.url %}
+                    <div class="col-sm-5 nav-block nav-block-left">
+                        <a class="prev" href="{{site.baseurl}}{{page.next.url}}" title="{{page.next.title}}">{{page.next.title}}</a>
+                    </div>
+                    {% else %}
+                    <div class="col-sm-5">
+                    </div>
+                    {% endif %} {% if page.previous.url %}
+                    <div class="col-sm-5 col-sm-offset-2 nav-block nav-block-right">
+                        <a class="next" href="{{site.baseurl}}{{page.previous.url}}" title="{{page.previous.title}}">{{page.previous.title}}</a>
+                    </div>
+                    {% else %}
+                    <div class="col-sm-5">
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 no-pad" id="disqus_thread"></div>
+            </div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'myfrontendblog';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+    {% include big-footer.html %} {% include footer.html %}
+    <script src="{{site.baseurl}}/js/vendor.js"></script>
+    <script src="{{site.baseurl}}/js/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<div class="row clearfix expand-row">
+    <a href="#top" class="expand-button" title="Haut de page">
+        <i class="fa fa-chevron-up host-expand2 actionbutton3"></i>
+    </a>
+</div>
+<div id="big-footer" class="container-fluid">
+<div class="container">
+<div class="row">
+    <div class="col-lg-4">
+        <h3>Derniers articles</h3>
+        <ul class="posts">
+            {% for post in site.posts limit:10 %}
+            <li>
+                <a href="{{ site.baseurl }}{{ post.url }}" title="{{post.title}}">
+                   {{ post.title }}</a>
+                <span class="date">{{ post.date | date: "%m/%d/%Y" }}</span><span class="author">par {{ post.author }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-lg-4">
+        <h3>Catégories</h3>
+        <ul>
+            {% for tag in site.tags %}
+                <li><a href="{{site.baseurl}}/tags/{{ tag[0] }}/index.html" title="{{tag[0]}}">{{ tag[0] }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-lg-4">
+        <h3>Liens</h3>
+        <ul>
+            <li><a href="{{site.baseurl}}/archives.html" title="Archives">Archives</a></li>
+            <li><a href="#" title="Contact">Contact</a></li>
+            <li><a href="#" title="Flux RSS">Flux RSS</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+</div>

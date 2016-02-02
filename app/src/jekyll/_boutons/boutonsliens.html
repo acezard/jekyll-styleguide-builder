@@ -1,0 +1,184 @@
+---
+title: "Boutons liens"
+---
+
+<div id="starterkit" class="field-style">
+
+    <a class="mainBtnRed" href="javascript:;">En savoir +</a>
+    <pre><code class="css">
+.mainBtn {
+	@include exo(600,normal);
+	@include fSize(14);
+	background-color:$primary;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	box-sizing:border-box;
+	color:$white;
+	display:inline-block;
+	padding: 1rem 2rem;
+	position: relative;
+	text-align:center;
+	text-decoration:none;
+	text-transform: uppercase;
+	transform: translateZ(0);
+	transition: color 200ms linear;
+	vertical-align: middle;
+	&:hover,
+	&:focus,
+	&:active,
+	&:visited {
+		text-decoration: none;
+		transition: color 200ms linear;
+		color: $primary;
+		&:before {
+			transform: scaleX(1);
+		}
+	}
+	&:before {
+		background: $white;
+		bottom: 0;
+		content: "";
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform-origin: 100% 50%;
+		transform: scaleX(0);
+		transition: transform 200ms ease-out;
+		z-index: -1;
+	}
+}</code></pre>
+	
+<br>
+
+	<a class="mainBtnBlue" href="javascript:;">Bouton principal, couleur variable</a>
+    <pre><code class="css">
+.mainBtn {
+	@include exo(600,normal);
+	@include fSize(14);
+	background-color:$primary;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	box-sizing:border-box;
+	color:$white;
+	display:inline-block;
+	padding: 1rem 2rem;
+	position: relative;
+	text-align:center;
+	text-decoration:none;
+	text-transform: uppercase;
+	transform: translateZ(0);
+	transition: color 200ms linear;
+	vertical-align: middle;
+	&:hover,
+	&:focus,
+	&:active,
+	&:visited {
+		text-decoration: none;
+		transition: color 200ms linear;
+		color: $primary;
+		&:before {
+			transform: scaleX(1);
+		}
+	}
+	&:before {
+		background: $white;
+		bottom: 0;
+		content: "";
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform-origin: 100% 50%;
+		transform: scaleX(0);
+		transition: transform 200ms ease-out;
+		z-index: -1;
+	}
+}</code></pre>
+	
+	<br>
+    <a class="searchBtn" href="javascript:;">Recherche</a>
+    <pre><code class="css">
+.headingSlider {
+    @include exo(800, normal);
+    @include fSize(22);
+}</code></pre>
+
+	<br>
+    <a class="btnKnowMore" href="javascript:;">En lire</a>
+    <pre><code class="css">
+</code></pre>
+
+	<br>
+    <a class="btnDownloadLg" href="javascript:;"><span>Télécharger</span> le rapport annuel</a>
+    <pre><code class="css">.btnDownloadLg {
+	@fSize(14);
+	@include exo(600,normal);
+	background:$primary;
+	color:$white;
+	display:inline-block;
+	max-width:31rem;
+	padding:7rem 7.5rem;
+	position:relative;
+	text-align:center;
+	text-transform: uppercase;
+	transition:background 200ms linear;
+	&:hover,
+	&:active,
+	&:visited,
+	&:focus {
+		color:$white;
+		text-decoration:none;
+	}
+	span {
+		display:block;
+	}
+	&:before {
+		top:3rem;
+	}
+	&:before,
+	&:after {
+		background:$white;
+		content:"";
+		display:block;
+		height:0.2rem;
+		left:0;
+		margin: 0 auto;
+		position:absolute;
+		right:0;
+		width:4rem;
+	}
+	&:after {
+		bottom:3rem;
+		color:$primary;
+		content:"+";
+		height:1.8rem;
+		width:1.8rem;
+		transition: transform 200ms linear;
+	}
+	&:hover {
+		background: lighten($primary, 7%);
+		transition:background 200ms linear;
+			&:after {
+				transform: scale(2);
+				transition: transform 200ms linear;
+			}
+	}
+}
+</code></pre>
+
+	<br>
+    <a class="btnGoProject" href="javascript:;">Répondre à l'appel à projet</a>
+    <pre><code class="css"></code></pre>
+
+
+	<br>
+    <a class="btnGoProjectStatic" href="javascript:;">Affiche de l'appel à projets</a>
+    <pre><code class="css"></code></pre>
+
+<br>
+
+	<div class="btnFileReadDownload">
+		<a href=""></a>
+		<a href=""></a>
+	</div>
+
+</div>

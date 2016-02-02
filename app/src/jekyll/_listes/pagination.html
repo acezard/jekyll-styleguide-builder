@@ -1,0 +1,141 @@
+---
+title: "Pagination"
+---
+
+<h3>Pagination pages de contenu</h3>
+<br>
+<div class="field-style">
+    <div class="navigation">
+        <ul class="listPagination1">
+            <li class="active"><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/">1</a></li>
+            <li><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/page/2/">2</a></li>
+            <li class="last-num"><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/page/3/">3</a></li>
+            <li class="go-last"><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/page/6/">Dernière page</a></li>
+        </ul>
+    </div>
+</div>
+<div class="field-style">
+    <div class="navigation">
+        <ul class="listPagination2">
+            <li class="active"><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/">1</a></li>
+            <li><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/page/2/">2</a></li>
+            <li><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/page/3/">3</a></li>
+        </ul>
+    </div>
+</div>
+<div class="field-style">
+    <div class="navigation">
+        <ul class="listPagination3">
+            <li class="go-first"><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/page/6/">Première page</a></li>
+            <li><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/">2</a></li>
+            <li class="active"><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/page/2/">3</a></li>
+            <li class="last-num"><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/page/3/">4</a></li>
+            <li class="go-last"><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/page/6/">Dernière page</a></li>
+        </ul>
+    </div>
+</div>
+<div class="field-style">
+    <div class="navigation">
+        <ul class="listPagination4">
+            <li class="go-first"><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/page/6/">Première page</a></li>
+            <li><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/">3</a></li>
+            <li class="active"><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/page/2/">4</a></li>
+            <li><a href="http://fondationdelavenir-lal.gre55.ecedi.loc/call_project_thematic/appel-a-projet/page/3/">5</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<pre><code class="sass">
+@mixin listPagination($color) {
+	padding-left:0;
+	li {
+		display: inline;
+		list-style: none;
+	}
+	li:not([class]),
+	.last-num {
+		&:hover a {
+			background-color: lighten($color, 50%);
+			transition:background-color 200ms linear;
+		}
+	}
+	a {
+		width:2.8rem;
+		height:2.8rem;
+		display:inline-block;
+		@include exo(700, normal);
+		@include fSize(12);
+		text-transform: uppercase;
+		color:$mainTxtColor;
+		text-align: center;
+		line-height: 2.8rem;
+		transition:background-color 200ms linear;
+		transition:text-shadow 200ms linear;
+
+	}
+	.active,
+	.go-first,
+	.go-last {
+		a {
+			color:$white;
+			background:$color;
+		}
+		&:hover {
+			a {
+				text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);;
+				transition:text-shadow 200ms linear;
+			}
+		}
+	}
+	.go-first,
+	.go-last {
+		a {
+			width:auto;
+			padding:0 0.8rem;
+		}
+	}
+	.last-num {
+		a {
+			&:after {
+				content:"…";
+			}
+		}
+	}
+}
+</code></pre>
+
+<h3>Pagination lexique</h3>
+<br>
+
+<div class="field-style">
+	<ul class="listLexicon">
+		<li><a href="A">A</a></li>
+		<li><a href="B">B</a></li>
+		<li><a href="C">C</a></li>
+		<li class="active"><a href="D">D</a></li>
+		<li><a href="E">E</a></li>
+		<li><a href="F">F</a></li>
+		<li><a href="G">G</a></li>
+		<li><a href="H">H</a></li>
+		<li><a href="I">I</a></li>
+		<li><a href="J">J</a></li>
+		<li><a href="K">K</a></li>
+		<li><a href="L">L</a></li>
+		<li><a href="M">M</a></li>
+		<li><a href="N">N</a></li>
+		<li><a href="O">O</a></li>
+		<li><a href="P">P</a></li>
+		<li><a href="Q">Q</a></li>
+		<li><a href="R">R</a></li>
+		<li><a href="S">S</a></li>
+		<li><a href="T">T</a></li>
+		<li><a href="U">U</a></li>
+		<li><a href="V">V</a></li>
+		<li><a href="W">W</a></li>
+		<li><a href="X">X</a></li>
+		<li><a href="Y">Y</a></li>
+		<li><a href="Z">Z</a></li>
+	</ul>
+</div>
